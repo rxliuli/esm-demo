@@ -4,8 +4,13 @@
   "description": "",
   "types": "./dist/index.d.ts",
   "exports": {
-    "import": "./dist/index.mjs",
-    "require": "./dist/index.js"
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json",
+    "./src": "./src/index.ts",
+    "./src/index": "./src/index.ts"
   },
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts --shims"
