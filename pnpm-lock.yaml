@@ -35,6 +35,41 @@ importers:
       tsx: 3.9.0
       typescript: 4.8.4
 
+  packages/esm-dep-node-lib:
+    specifiers:
+      '@types/lodash-es': ^4.17.6
+      '@types/node': ^18.7.23
+      esbuild: ^0.15.10
+      lodash-es: ^4.17.21
+      lodash-unified: ^1.0.2
+      tsup: ^6.2.3
+      tsx: ^3.9.0
+      typescript: ^4.8.4
+    dependencies:
+      lodash-es: 4.17.21
+      lodash-unified: 1.0.2_6vt5du6ay2thm2pqhl32dksnvu
+    devDependencies:
+      '@types/lodash-es': 4.17.6
+      '@types/node': 18.7.23
+      esbuild: 0.15.10
+      tsup: 6.2.3_typescript@4.8.4
+      tsx: 3.9.0
+      typescript: 4.8.4
+
+  packages/esm-dep-node-lib-test:
+    specifiers:
+      '@types/node': ^18.7.23
+      esm-dep-node-lib: workspace:^
+      tsup: ^6.2.3
+      tsx: ^3.9.0
+      typescript: ^4.8.4
+    devDependencies:
+      '@types/node': 18.7.23
+      esm-dep-node-lib: link:../esm-dep-node-lib
+      tsup: 6.2.3_typescript@4.8.4
+      tsx: 3.9.0
+      typescript: 4.8.4
+
   packages/esm-node-app:
     specifiers:
       '@types/node': ^18.7.23
@@ -142,6 +177,14 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
     dev: true
+
+  /@types/lodash-es/4.17.6:
+    resolution: {integrity: sha512-R+zTeVUKDdfoRxpAryaQNRKk3105Rrgx2CFRClIgRGaqDTdjsm8h6IYA8ir584W3ePzkZfst5xIgDwYrlh9HLg==}
+    dependencies:
+      '@types/lodash': 4.14.186
+
+  /@types/lodash/4.14.186:
+    resolution: {integrity: sha512-eHcVlLXP0c2FlMPm56ITode2AgLMSa6aJ05JTTbYbI+7EMkCEE5qk2E41d5g2lCVTqRe0GnnRFurmlCsDODrPw==}
 
   /@types/node/18.7.23:
     resolution: {integrity: sha512-DWNcCHolDq0ZKGizjx2DZjR/PqsYwAcYUJmfMWqtVU2MBMG5Mo+xFZrhGId5r/O5HOuMPyQEcM6KUBp5lBZZBg==}
@@ -630,6 +673,21 @@ packages:
     resolution: {integrity: sha512-iyT2MXws+dc2Wi6o3grCFtGXpeMvHmJqS27sMPGtV2eUu4PeFnG+33I8BlFK1t1NWMjOpcx9bridn5yxLDX2gQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dev: true
+
+  /lodash-es/4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
+    dev: false
+
+  /lodash-unified/1.0.2_6vt5du6ay2thm2pqhl32dksnvu:
+    resolution: {integrity: sha512-OGbEy+1P+UT26CYi4opY4gebD8cWRDxAT6MAObIVQMiqYdxZr1g3QHWCToVsm31x2NkLS4K3+MC2qInaRMa39g==}
+    peerDependencies:
+      '@types/lodash-es': '*'
+      lodash: '*'
+      lodash-es: '*'
+    dependencies:
+      '@types/lodash-es': 4.17.6
+      lodash-es: 4.17.21
+    dev: false
 
   /lodash.sortby/4.7.0:
     resolution: {integrity: sha512-HDWXG8isMntAyRF5vZ7xKuEvOhT4AhlRt/3czTSjvGUxjYCBVRQY48ViDHyfYz9VIoBkW4TMGQNapx+l3RUwdA==}
